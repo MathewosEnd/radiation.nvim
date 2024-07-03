@@ -565,7 +565,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         pylsp = {},
         -- rust_analyzer = {},
@@ -785,13 +785,13 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'ellisonleao/gruvbox.nvim',
+    'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
@@ -842,9 +842,9 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'fortran', 'python', 'julia', 'latex' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'fortran', 'python', 'julia' },
       -- Autoinstall languages that are not installed
-      auto_install = true,
+      auto_install = false,
       highlight = {
         enable = true,
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
@@ -917,7 +917,7 @@ require('lazy').setup({
 
 -- Neovide config
 if vim.g.neovide then
-  vim.o.guifont = 'JuliaMono:h13.5' -- text below applies for VimScript
+  vim.o.guifont = 'Jetbrains Mono:h13.5' -- text below applies for VimScript
   vim.g.neovide_scale_factor = 0.75
   vim.g.neovide_cursor_animation_length = 0
 end
