@@ -574,6 +574,7 @@ require('lazy').setup({
         -- rust_analyzer = {},
         fortls = {},
         julials = {},
+        texlab = {},
         ltex = {
           cmd = { 'ltex-ls' },
           enabled = { 'markdown', 'text', 'tex', 'latex', 'bib', 'gitcommit' },
