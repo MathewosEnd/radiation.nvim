@@ -12,8 +12,21 @@ A starting point for Neovim that is:
 
 ## Installation
 
-### Install Neovim
+### Installation on WSL
 
+Remove any previous installations
+```bash
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+```
+
+Install neovim 
+```bash
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar -xvzf nvim-linux64.tar.gz
+sudo mv nvim-linux64 /opt/
+sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+```
 Kickstart.nvim targets *only* the latest
 ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest
 ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim.
