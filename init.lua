@@ -923,7 +923,7 @@ require('lazy').setup({
 
 -- Neovide config
 if vim.g.neovide then
-  vim.o.guifont = 'Jetbrains Mono:h13.5' -- text below applies for VimScript
+  vim.o.guifont = 'Jetbrains Mono:h12.5' -- text below applies for VimScript
   vim.g.neovide_scale_factor = 0.75
   vim.g.neovide_cursor_animation_length = 0
 end
